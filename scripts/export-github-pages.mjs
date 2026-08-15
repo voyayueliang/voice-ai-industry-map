@@ -38,6 +38,7 @@ const pages = [
   { route: "/", file: "index.html" },
   { route: "/guide", file: path.join("guide", "index.html") },
   { route: "/network", file: path.join("network", "index.html") },
+  { route: "/research", file: path.join("research", "index.html") },
 ];
 
 try {

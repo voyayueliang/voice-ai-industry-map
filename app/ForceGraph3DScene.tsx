@@ -484,10 +484,10 @@ export default function ForceGraph3DScene({
 
   return (
     <div className="force-graph-shell">
-      <div ref={containerRef} className="force-graph-canvas" aria-label="可旋转、缩放并点击人物的 Voice AI 三维关系网络" />
+      <div ref={containerRef} className="force-graph-canvas" aria-label="可旋转、缩放并点击人物的前沿 AI 行业三维关系网络" />
       {!ready && !error && <div className="force-graph-loading">正在组织三维行业关系…</div>}
       {error && <div className="force-graph-error">{error}</div>}
-      <div className="force-graph-gesture" aria-hidden="true">拖动空白处旋转 · 滚轮缩放 · 点击人物聚焦 · 点击报道打开原文</div>
+      <div className="force-graph-gesture" aria-hidden="true">拖动空白处旋转 · 滚轮缩放 · 点击人物聚焦 · 点击来源节点打开原文</div>
     </div>
   );
 }

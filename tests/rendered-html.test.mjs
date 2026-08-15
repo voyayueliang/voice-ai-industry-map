@@ -23,14 +23,15 @@ async function render(pathname = "/") {
   );
 }
 
-test("serves the black relationship graph as the main page", async () => {
+test("serves the verified Voice AI graph as the main product sample", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /行业人物图谱/);
-  assert.match(html, /FOR NEWCOMERS/);
+  assert.match(html, /FRONTIER FIELD ATLAS/);
+  assert.match(html, /Voice AI · 已核验行业样本/);
+  assert.match(html, /研究一个新领域/);
   assert.match(html, /人物邻域/);
   assert.match(html, /行业全图/);
   assert.match(html, /class="is-active">行业全图/);
@@ -56,8 +57,9 @@ test("serves the relationship graph as a standalone page", async () => {
   const response = await render("/network");
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /行业人物图谱/);
-  assert.match(html, /FOR NEWCOMERS/);
+  assert.match(html, /FRONTIER FIELD ATLAS/);
+  assert.match(html, /FOR PROFESSIONAL NEWCOMERS/);
+  assert.match(html, /研究一个新领域/);
   assert.match(html, /学习导读/);
   assert.match(html, /人物邻域/);
   assert.match(html, /行业全图/);
@@ -70,6 +72,20 @@ test("serves the relationship graph as a standalone page", async () => {
   assert.match(html, /他真正解决什么问题/);
   assert.match(html, /他处在行业哪一层/);
   assert.match(html, /一次 Voice AI 对话要经过六层能力/);
+});
+
+test("serves the reusable field research intake", async () => {
+  const response = await render("/research");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /前沿 AI 行业人物研究引擎/);
+  assert.match(html, /先弄清行业怎样运转/);
+  assert.match(html, /生成领域结构草案/);
+  assert.match(html, /Voice AI/);
+  assert.match(html, /AI Coding/);
+  assert.match(html, /具身智能/);
+  assert.match(html, /AI for Science/);
+  assert.match(html, /自动结果是研究线索/);
 });
 
 test("keeps the source map internally consistent", async () => {
