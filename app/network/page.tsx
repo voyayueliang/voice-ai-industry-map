@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import Link from "next/link";
 import ForceGraph3DScene from "../ForceGraph3DScene";
 import mapData from "../data/voice-ai-industry-map.json";
 import relationData from "../data/voice-ai-industry-relations.json";
@@ -41,6 +40,7 @@ relationLabels.product_context = "人物与产品／项目";
 relationLabels.media_context = "产品与新闻报道";
 const compactName = (name: string) => name.split(/[／/（(]/)[0].trim();
 const compactLayer = (layer: string) => layer.replace("／", " / ");
+const siteBasePath = process.env.NEXT_PUBLIC_SITE_BASE_PATH ?? "";
 const cleanUrl = (value: string) => {
   if (!value) return "";
   const markdownMatch = value.match(/\((https?:\/\/[^)]+)\)$/);
@@ -176,9 +176,9 @@ export default function NetworkPage() {
   return (
     <main className="standalone-network">
       <header className="standalone-network-header">
-        <Link className="standalone-network-brand" href="/"><span>VOICE AI</span><strong>行业人物图谱</strong></Link>
+        <a className="standalone-network-brand" href={`${siteBasePath}/`}><span>VOICE AI</span><strong>行业人物图谱</strong></a>
         <div className="standalone-network-title"><span>FOR NEWCOMERS / 给第一次进入这个行业的人</span><p>不预设技术背景：先认识人，再补概念，最后理解关系与证据。</p></div>
-        <Link className="standalone-network-back" href="/guide">学习导读 ↗</Link>
+        <a className="standalone-network-back" href={`${siteBasePath}/guide`}>学习导读 ↗</a>
       </header>
 
       <div className="standalone-network-grid">
@@ -260,7 +260,7 @@ export default function NetworkPage() {
             {selectedPublicLinks.length > 0 && <section className="network-public-sources"><span>已核验的公开入口</span><p>先看本人、公司和项目原始资料，再看媒体评论。</p><div>{selectedPublicLinks.map((link) => <a key={`${link.kind}-${link.url}`} href={link.url} target="_blank" rel="noreferrer"><small>{link.kind}</small><strong>{link.label}</strong><b>↗</b></a>)}</div></section>}
 
             <div className="network-reading-links">
-              <Link href={`/guide#person=${encodeURIComponent(selected.id)}`}>完整学习页</Link>
+              <a href={`${siteBasePath}/guide#person=${encodeURIComponent(selected.id)}`}>完整学习页</a>
               {selected.dossierUrl && <a href={cleanUrl(selected.dossierUrl)} target="_blank" rel="noreferrer">人物研究底稿 ↗</a>}
               {selected.deepProfileUrl && <a href={cleanUrl(selected.deepProfileUrl)} target="_blank" rel="noreferrer">读者版深度侧写 ↗</a>}
             </div>

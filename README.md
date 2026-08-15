@@ -1,5 +1,7 @@
 # Voice AI 行业人物图谱
 
+在线访问：https://voyayueliang.github.io/voice-ai-industry-map/
+
 这是一个面向 Voice AI 初学者的公开行业认知工具。根页面以黑色 3D 关系网络连接人物、产品、技术路线和公开来源；`/guide` 提供六层行业导读。
 
 ## 网页解决什么
