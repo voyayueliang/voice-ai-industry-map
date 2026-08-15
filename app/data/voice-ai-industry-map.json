@@ -1,0 +1,665 @@
+{
+  "version": "0.2",
+  "updated": "2026-08-14",
+  "source": "",
+  "layers": [
+    "终端与声音入口",
+    "实时传输与媒体工程",
+    "语音／音频模型",
+    "Agent运行／上下文／记忆",
+    "产品与应用",
+    "生态与分发"
+  ],
+  "people": [
+    {
+      "id": "justin-uberti",
+      "recordId": "",
+      "name": "Justin Uberti",
+      "org": "Thinking Machines Lab",
+      "stage": "当下采访",
+      "primaryLayer": "实时传输与媒体工程",
+      "secondaryLayers": [
+        "语音／音频模型",
+        "Agent运行／上下文／记忆"
+      ],
+      "influence": [
+        "标准／研究",
+        "产品／公司"
+      ],
+      "coreProblem": "如何让实时媒体连接在低延迟、弱网络、打断与轮替中保持可用，并把这些约束重新带入实时多模态 AI。",
+      "position": "连接 WebRTC 技术史与实时多模态 AI 的关键架构人物；最适合用来理解传统实时通信为何正在成为 AI 对话基础设施。",
+      "compare": "Sean DuBois；Bibo Xu；实时 AI 基础设施团队",
+      "evidence": "IETF／WebRTC 标准参与记录、Google Duo 与实时通信项目经历、本人实时语音访谈及 2026 WARP 草案。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "sean-dubois",
+      "recordId": "",
+      "name": "Sean DuBois",
+      "org": "Thinking Machines Lab / Pion",
+      "stage": "长期追踪",
+      "primaryLayer": "实时传输与媒体工程",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆"
+      ],
+      "influence": [
+        "开源／开发者基础设施",
+        "产品／公司"
+      ],
+      "coreProblem": "如何把复杂的实时通信能力做成开发者可以理解、组合和部署的开源基础设施。",
+      "position": "Pion 的创建者与维护者，代表从开源开发者栈进入实时 AI 基础设施的路线；比 Justin 更贴近实现与开发者采用。",
+      "compare": "Justin Uberti；LiveKit；其他 WebRTC 实现",
+      "evidence": "Pion 项目、WebRTC for the Curious、GitHub 贡献与公开技术访谈；当前任职信息来自 LinkedIn，具体职责仍待本人确认。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "许高-nathan-xu",
+      "recordId": "",
+      "name": "许高 / Nathan Xu",
+      "org": "PLAUD",
+      "stage": "当下采访",
+      "primaryLayer": "终端与声音入口",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆",
+        "产品与应用"
+      ],
+      "influence": [
+        "产品／公司",
+        "硬件／交互",
+        "生态／分发"
+      ],
+      "coreProblem": "如何把线下谈话稳定捕获并转成可检索、可理解、可复用的个人与工作上下文。",
+      "position": "位于 Voice AI 的硬件入口与会议应用交界处；PLAUD 用专用设备争夺声音入口，再以软件和订阅延伸价值。",
+      "compare": "Granola；手机录音／会议笔记 App；其他 AI 录音硬件",
+      "evidence": "PLAUD 官方产品与创始人资料、独立媒体报道、产品评测及用户对专用硬件、订阅、隐私和摘要可靠性的反馈。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "顾嘉唯",
+      "recordId": "",
+      "name": "顾嘉唯",
+      "org": "灵宇宙 / Lingverse",
+      "stage": "长期追踪",
+      "primaryLayer": "终端与声音入口",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆",
+        "产品与应用"
+      ],
+      "influence": [
+        "产品／公司",
+        "硬件／交互"
+      ],
+      "coreProblem": "如何让具身 AI 从被动响应走向主动理解环境、维持记忆并建立长期关系。",
+      "position": "代表具身陪伴与主动交互路线；其长期价值不只在硬件形态，而在身体、人格、记忆和数据闭环如何结合。",
+      "compare": "Tolan 团队；Jibo 原团队；其他 AI 陪伴硬件",
+      "evidence": "灵宇宙与 Luka 公开资料、早期合作报道、WIRED 对 Jibo 复活项目的报道及儿童数据、IP 和产品定义争议。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "granola-核心创始人或产品负责人",
+      "recordId": "",
+      "name": "Granola 核心创始人或产品负责人",
+      "org": "Granola",
+      "stage": "等待外部信息",
+      "primaryLayer": "产品与应用",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆"
+      ],
+      "influence": [
+        "产品／公司"
+      ],
+      "coreProblem": "如何在会议中让 AI 提供上下文和整理能力，同时保留人的判断、注意力与控制。",
+      "position": "Granola 团队占位项；具体采访需在 Chris 的公司判断路线与 Sam 的交互设计路线之间选择。",
+      "compare": "PLAUD；传统会议机器人；自动转写产品",
+      "evidence": "Granola 官方产品说明与两位创始人公开表达；团队占位项不作为独立人物进入正式图谱。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "tolan-创始团队",
+      "recordId": "",
+      "name": "Tolan 创始团队",
+      "org": "Portola / Tolan",
+      "stage": "等待外部信息",
+      "primaryLayer": "产品与应用",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆",
+        "终端与声音入口"
+      ],
+      "influence": [
+        "产品／公司",
+        "硬件／交互"
+      ],
+      "coreProblem": "如何让语音优先的 AI 陪伴形成持续关系，同时控制依赖、隐私与健康风险。",
+      "position": "Tolan 团队占位项；三位创始人分别承担产品哲学、技术系统和消费增长，应拆开理解。",
+      "compare": "顾嘉唯；其他 AI 陪伴产品",
+      "evidence": "Tolan／Portola 官方资料、OpenAI 合作案例、三位创始人公开内容和用户社区反馈。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "greg-wayne",
+      "recordId": "",
+      "name": "Greg Wayne",
+      "org": "Google DeepMind / Project Astra",
+      "stage": "长期追踪",
+      "primaryLayer": "Agent运行／上下文／记忆",
+      "secondaryLayers": [
+        "语音／音频模型",
+        "产品与应用",
+        "终端与声音入口"
+      ],
+      "influence": [
+        "标准／研究",
+        "产品／公司",
+        "硬件／交互"
+      ],
+      "coreProblem": "如何让实时多模态助手在声音、视觉和环境变化中维持上下文，并处理主动性、打断、记忆与隐私。",
+      "position": "Project Astra 研究侧代表；与 Bibo Xu 的产品管理位置互补，适合做研究愿景／产品落地对照。",
+      "compare": "Bibo Xu；实时多模态助手研究者；Gemini Live 团队",
+      "evidence": "Google DeepMind 官方播客明确其为 Director in Research，并以 Greg Wayne 为 Project Astra 研究对谈对象；官方项目页列其为贡献者之一。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "christopher-pedregal",
+      "recordId": "",
+      "name": "Christopher Pedregal",
+      "org": "Granola",
+      "stage": "长期追踪",
+      "primaryLayer": "产品与应用",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆",
+        "生态与分发"
+      ],
+      "influence": [
+        "产品／公司",
+        "生态／分发"
+      ],
+      "coreProblem": "如何把 AI 的上下文理解转成可持续的会议产品，同时不把人的判断完全外包。",
+      "position": "Granola 的公司与市场判断代表；更适合回答产品定位、组织选择和会议智能为何现在成立。",
+      "compare": "Sam Stephenson；PLAUD；传统会议机器人",
+      "evidence": "Granola 官方资料、Socratic 到 Granola 的创业线、投资人叙事、媒体采访和产品社区反馈。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "sam-stephenson",
+      "recordId": "",
+      "name": "Sam Stephenson",
+      "org": "Granola",
+      "stage": "当下采访",
+      "primaryLayer": "产品与应用",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆"
+      ],
+      "influence": [
+        "产品／公司",
+        "硬件／交互"
+      ],
+      "coreProblem": "如何用安静、可控、以人为中心的交互，让 AI 介入会议而不破坏注意力和信任。",
+      "position": "Granola 的交互与产品工艺代表；比 Chris 更适合进入具体原型、笔记机制、失败可见性与信任设计。",
+      "compare": "Christopher Pedregal；PLAUD；传统自动会议纪要",
+      "evidence": "个人官网与 GitHub、Granola 产品设计公开表达、设计社区反馈和产品使用争议。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "quinten-farmer",
+      "recordId": "",
+      "name": "Quinten Farmer",
+      "org": "Tolan / Portola",
+      "stage": "长期追踪",
+      "primaryLayer": "产品与应用",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆",
+        "终端与声音入口"
+      ],
+      "influence": [
+        "产品／公司",
+        "硬件／交互"
+      ],
+      "coreProblem": "如何设计一种不以人形出现、但能形成陪伴关系的语音原生 AI 产品。",
+      "position": "Tolan 的产品哲学和人机关系代表；适合讨论陪伴价值、设计语言和关系伦理。",
+      "compare": "Evan Goldschmidt；Ajay Mehta；顾嘉唯",
+      "evidence": "Tolan 官方资料、本人公开内容、独立媒体采访与关于隐私、声音事故和情感依赖的社区反馈。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "evan-goldschmidt",
+      "recordId": "",
+      "name": "Evan Goldschmidt",
+      "org": "Tolan / Portola",
+      "stage": "长期追踪",
+      "primaryLayer": "Agent运行／上下文／记忆",
+      "secondaryLayers": [
+        "实时传输与媒体工程",
+        "产品与应用"
+      ],
+      "influence": [
+        "产品／公司",
+        "开源／开发者基础设施"
+      ],
+      "coreProblem": "如何把低延迟语音、记忆检索、人格控制和环境理解组合成持续可用的陪伴系统。",
+      "position": "Tolan 的技术系统代表；处于实时语音基础设施与陪伴产品之间，是理解体验如何由工程约束塑造的入口。",
+      "compare": "Quinten Farmer；Justin Uberti；实时语音 Agent 基础设施",
+      "evidence": "Portola／Tolan 公开技术内容、OpenAI 合作案例与本人对实时语音和记忆系统的说明；部分早期职责待本人确认。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "ajay-mehta",
+      "recordId": "",
+      "name": "Ajay Mehta",
+      "org": "Tolan / Portola",
+      "stage": "长期追踪",
+      "primaryLayer": "产品与应用",
+      "secondaryLayers": [
+        "生态与分发",
+        "终端与声音入口"
+      ],
+      "influence": [
+        "产品／公司",
+        "生态／分发"
+      ],
+      "coreProblem": "如何让语音陪伴产品完成用户理解、onboarding、留存、付费和健康边界之间的平衡。",
+      "position": "Tolan 的消费产品与增长代表；适合补足技术和产品哲学之外的用户采用、商业化与分发视角。",
+      "compare": "Quinten Farmer；Evan Goldschmidt；消费型 AI 陪伴产品",
+      "evidence": "公开职业时间线、Tolan／Portola 团队资料、产品访谈与用户社区反馈；部分早期经历和具体职衔待核。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "bibo-xu",
+      "recordId": "",
+      "name": "Bibo Xu",
+      "org": "Google DeepMind / Project Astra",
+      "stage": "长期追踪",
+      "primaryLayer": "Agent运行／上下文／记忆",
+      "secondaryLayers": [
+        "语音／音频模型",
+        "产品与应用",
+        "终端与声音入口"
+      ],
+      "influence": [
+        "标准／研究",
+        "产品／公司",
+        "硬件／交互"
+      ],
+      "coreProblem": "如何把持续多模态上下文、低延迟响应、主动性和摄像头在场从演示能力变成可信产品。",
+      "position": "Project Astra 的产品化代表；位于模型能力、Agent上下文和真实世界交互的交界处。",
+      "compare": "Justin Uberti；Project Astra 研究负责人；其他实时多模态助手团队",
+      "evidence": "Google 官方节目与开发者内容、Project Astra／Gemini Live 公开材料及独立媒体实测；不能写成唯一负责人。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "tanay-kothari",
+      "recordId": "",
+      "name": "Tanay Kothari",
+      "org": "Wispr / Wispr Flow",
+      "stage": "当下采访",
+      "primaryLayer": "产品与应用",
+      "secondaryLayers": [
+        "终端与声音入口"
+      ],
+      "influence": [
+        "产品／公司",
+        "硬件／交互"
+      ],
+      "coreProblem": "怎样把自然语音从一个输入功能变成跨应用、跨设备的日常计算入口，同时处理上下文和隐私。",
+      "position": "Voice-first 生产力产品的代表人物；连接语音输入、上下文理解、隐私和未来终端入口。",
+      "compare": "Connor Zwick；Karan Goel；语音输入与 voice OS 产品",
+      "evidence": "Wispr 官方 founder bio、官方产品与隐私文章；RTE 专辑第 32、37 篇提供其公开叙事线索。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "mati-staniszewski",
+      "recordId": "",
+      "name": "Mati Staniszewski",
+      "org": "ElevenLabs",
+      "stage": "长期追踪",
+      "primaryLayer": "语音／音频模型",
+      "secondaryLayers": [
+        "产品与应用"
+      ],
+      "influence": [
+        "产品／公司",
+        "生态／分发"
+      ],
+      "coreProblem": "一家基础音频模型公司怎样同时服务创作者、开发者和企业，并把模型能力转化成多个产品与 Agent 平台。",
+      "position": "ElevenLabs 产品和商业方向的核心公共代表；与 Piotr 的研究工程位置互补。",
+      "compare": "Piotr Dąbkowski；Karan Goel；Zach Koch",
+      "evidence": "ElevenLabs 官方 founder bio、2026 Series D 与产品方向；RTE 专辑第 23、29 篇。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "piotr-da-bkowski",
+      "recordId": "",
+      "name": "Piotr Dąbkowski",
+      "org": "ElevenLabs",
+      "stage": "长期追踪",
+      "primaryLayer": "语音／音频模型",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆"
+      ],
+      "influence": [
+        "标准／研究",
+        "产品／公司"
+      ],
+      "coreProblem": "音频模型怎样同时提升表现力、理解、低延迟和可控性，并成为可用于真实对话的系统。",
+      "position": "ElevenLabs 的研究与工程核心代表；位于语音基础模型向实时 Agent 过渡的位置。",
+      "compare": "Mati Staniszewski；Albert Gu；ZQ Huang",
+      "evidence": "ElevenLabs 官方作者页和 press kit；RTE 专辑第 23 篇。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "karan-goel",
+      "recordId": "",
+      "name": "Karan Goel",
+      "org": "Cartesia",
+      "stage": "长期追踪",
+      "primaryLayer": "语音／音频模型",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆"
+      ],
+      "influence": [
+        "产品／公司",
+        "开源／开发者基础设施"
+      ],
+      "coreProblem": "低延迟音频模型公司怎样从 TTS 扩展到 STT、开发平台和端侧实时智能。",
+      "position": "Cartesia 的产品／公司路线代表；与 Albert Gu 的研究路线互补。",
+      "compare": "Albert Gu；Piotr Dąbkowski；Zach Koch",
+      "evidence": "Cartesia 官方博客与 RTE 专辑第 12 篇。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "albert-gu",
+      "recordId": "",
+      "name": "Albert Gu",
+      "org": "Cartesia",
+      "stage": "长期追踪",
+      "primaryLayer": "语音／音频模型",
+      "secondaryLayers": [
+        "终端与声音入口"
+      ],
+      "influence": [
+        "标准／研究",
+        "产品／公司"
+      ],
+      "coreProblem": "为什么状态空间模型可能更适合长序列、低延迟和端侧实时智能，它与 Transformer 的真实取舍是什么。",
+      "position": "状态空间模型与实时／端侧智能的研究标杆；是 Cartesia 技术根基的关键人物之一。",
+      "compare": "Karan Goel；Piotr Dąbkowski；端侧模型研究者",
+      "evidence": "Cartesia 官方博客作者与联合创始团队资料；RTE 专辑第 12 篇。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "bing-wu",
+      "recordId": "",
+      "name": "Bing Wu",
+      "org": "Retell AI",
+      "stage": "当下采访",
+      "primaryLayer": "产品与应用",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆"
+      ],
+      "influence": [
+        "产品／公司",
+        "开源／开发者基础设施"
+      ],
+      "coreProblem": "语音 Agent 怎样从一个低延迟 API 进入真实呼叫中心，并在可靠性、交接、评估和企业流程中承担责任。",
+      "position": "企业语音 Agent／AI 呼叫中心的代表创业者；连接模型、电话网络和业务流程。",
+      "compare": "魏佳星；ElevenAgents；企业级 Voice Agent 平台",
+      "evidence": "Retell AI 官方团队和技术文章；RTE 专辑第 3 篇。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "zexia-zhang",
+      "recordId": "",
+      "name": "Zexia Zhang",
+      "org": "Retell AI",
+      "stage": "长期追踪",
+      "primaryLayer": "Agent运行／上下文／记忆",
+      "secondaryLayers": [
+        "实时传输与媒体工程"
+      ],
+      "influence": [
+        "开源／开发者基础设施",
+        "产品／公司"
+      ],
+      "coreProblem": "企业语音 Agent 怎样在电话网络、轮次判断、打断恢复、模型故障与复杂业务流程中保持可靠。",
+      "position": "Retell AI 的技术系统代表；位于 Agent 编排、实时媒体和企业呼叫流程的交界处。",
+      "compare": "Bing Wu；Sean DuBois；企业 Voice Agent 技术负责人",
+      "evidence": "Retell AI 官方团队页、YC 公司页和官方技术文章。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "connor-zwick",
+      "recordId": "",
+      "name": "Connor Zwick",
+      "org": "Speak",
+      "stage": "长期追踪",
+      "primaryLayer": "产品与应用",
+      "secondaryLayers": [
+        "语音／音频模型"
+      ],
+      "influence": [
+        "产品／公司",
+        "硬件／交互"
+      ],
+      "coreProblem": "实时语音如何从自然交互变成可衡量的学习反馈，语音界面与 GUI 在教学中应该怎样分工。",
+      "position": "实时口语学习／AI tutor 的产品代表；把语音模型能力嵌入学习闭环。",
+      "compare": "Tanay Kothari；AI tutor；语言学习产品",
+      "evidence": "RTE 专辑第 10 篇；Speak 投资方公开 founder 信息。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "zach-koch",
+      "recordId": "",
+      "name": "Zach Koch",
+      "org": "Ultravox AI",
+      "stage": "长期追踪",
+      "primaryLayer": "语音／音频模型",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆"
+      ],
+      "influence": [
+        "产品／公司",
+        "开源／开发者基础设施"
+      ],
+      "coreProblem": "speech-native 模型怎样从研究主张变成可部署、可扩展的企业 Voice AI 平台。",
+      "position": "speech-native Voice AI 平台的产品与公司代表；连接模型路线和企业落地。",
+      "compare": "ZQ Huang；Justin Uberti；Retell AI",
+      "evidence": "Ultravox 官方团队页、2025 rebrand／产品文章；RTE 专辑第 2 篇使用其路线图。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "zhongqiang-zq-huang",
+      "recordId": "",
+      "name": "Zhongqiang (ZQ) Huang",
+      "org": "Ultravox AI",
+      "stage": "长期追踪",
+      "primaryLayer": "语音／音频模型",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆"
+      ],
+      "influence": [
+        "标准／研究",
+        "产品／公司"
+      ],
+      "coreProblem": "直接处理声音的模型究竟保留了哪些文本转写会丢失的信息，又付出了什么训练、推理和可控性代价。",
+      "position": "Ultravox speech-native 模型研究代表；与 Zach Koch 的产品／企业平台位置互补。",
+      "compare": "Zach Koch；Piotr Dąbkowski；Albert Gu；端到端语音研究者",
+      "evidence": "Ultravox 官方 rebrand／模型文章与团队页；RTE 专辑第 2 篇路线图。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "魏佳星",
+      "recordId": "",
+      "name": "魏佳星",
+      "org": "云蝠智能",
+      "stage": "当下采访",
+      "primaryLayer": "产品与应用",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆"
+      ],
+      "influence": [
+        "产品／公司"
+      ],
+      "coreProblem": "中国企业电话机器人怎样从规则、关键词和传统 NLP 迁移到生成式 Agent，哪些旧系统仍然更合适。",
+      "position": "中国企业电话机器人／AI 客服应用层 Builder；代表生成式方案对旧有呼叫系统的改造。",
+      "compare": "Bing Wu；传统呼叫中心；中国企业 Voice Agent",
+      "evidence": "RTE 2025 AI 客服 Meetup 公开分享；需补公司官方与独立来源。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "张栋",
+      "recordId": "",
+      "name": "张栋",
+      "org": "Xiaomi MiMo-Audio / SpeechGPT",
+      "stage": "当下采访",
+      "primaryLayer": "语音／音频模型",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆"
+      ],
+      "influence": [
+        "标准／研究"
+      ],
+      "coreProblem": "语音 token 与跨模态训练怎样让模型理解和生成情绪、语气、口音与环境信息，端到端路线还缺什么。",
+      "position": "端到端拟人化语音对话与 Speech Tokenization 研究者；位于语音模型和实时 Agent 交界处。",
+      "compare": "ZQ Huang；Piotr Dąbkowski；端到端语音模型研究者",
+      "evidence": "RTE2024 Voice AI 专场公开资料；需以论文和当前机构主页完成刷新。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "沈金堤",
+      "recordId": "",
+      "name": "沈金堤",
+      "org": "RustPBX / rsipstack",
+      "stage": "当下采访",
+      "primaryLayer": "实时传输与媒体工程",
+      "secondaryLayers": [
+        "Agent运行／上下文／记忆"
+      ],
+      "influence": [
+        "开源／开发者基础设施",
+        "产品／公司"
+      ],
+      "coreProblem": "怎样把 SIP、WebRTC、PBX、VAD、ASR 和 TTS 重组为适合 Voice Agent 的电话基础设施。",
+      "position": "中国 AI 原生 PBX／SIP 开源基础设施 Builder，位于实时媒体、电话网络和 Voice Agent 编排交界处。",
+      "compare": "Sean DuBois；Zexia Zhang；杜金房",
+      "evidence": "RustPBX GitHub、官方文档与 release；RTE 2025 AI 客服 Meetup；GOSIM 2025 speaker 信息。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "胡岳威-halajohn",
+      "recordId": "",
+      "name": "胡岳威（Halajohn）",
+      "org": "TEN Framework / Agora",
+      "stage": "当下采访",
+      "primaryLayer": "Agent运行／上下文／记忆",
+      "secondaryLayers": [
+        "实时传输与媒体工程"
+      ],
+      "influence": [
+        "开源／开发者基础设施",
+        "产品／公司"
+      ],
+      "coreProblem": "怎样让实时多模态 Agent 的不同模型、语言、云边端资源和状态在同一框架里可靠运行。",
+      "position": "TEN Framework 的主要发起人与架构代表，连接声网实时互动能力和开源 Voice Agent 开发者生态。",
+      "compare": "Sean DuBois；沈金堤；Voice Agent 编排框架",
+      "evidence": "TEN 官方文档、GitHub releases、个人 GitHub／LinkedIn／X 与 RTE Meetup 交叉核验。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "张晴晴",
+      "recordId": "",
+      "name": "张晴晴",
+      "org": "Magic Data / MagicHub",
+      "stage": "长期追踪",
+      "primaryLayer": "语音／音频模型",
+      "secondaryLayers": [
+        "产品与应用"
+      ],
+      "influence": [
+        "标准／研究",
+        "产品／公司"
+      ],
+      "coreProblem": "真实重叠语音、自然打断和多流对话数据怎样被采集、标注和评估，数据如何决定全双工模型的上限。",
+      "position": "全双工／自发对话数据的产业 Builder；连接数据生产、模型训练和 Voice UX。",
+      "compare": "张栋；ZQ Huang；全双工语音模型团队",
+      "evidence": "RTE 2025 全双工 Meetup、个人 LinkedIn、MagicHub 数据集与 GitHub 组织。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    },
+    {
+      "id": "杜金房-seven-du",
+      "recordId": "",
+      "name": "杜金房（Seven Du）",
+      "org": "FreeSWITCH 中文社区 / RTSCon / 小樱桃科技",
+      "stage": "当下采访",
+      "primaryLayer": "实时传输与媒体工程",
+      "secondaryLayers": [
+        "生态与分发"
+      ],
+      "influence": [
+        "开源／开发者基础设施",
+        "生态／分发"
+      ],
+      "coreProblem": "当 Voice Agent 进入 PSTN／SIP 的现实世界，传统实时通信工程经验哪些仍然不可替代。",
+      "position": "中国 FreeSWITCH／SIP 社区的长期关键人物；连接通信基础设施、开源社区和 AI 语音新周期。",
+      "compare": "Sean DuBois；沈金堤；实时通信社区组织者",
+      "evidence": "个人图书／网站、FreeSWITCH 中文社区、RTSCon 与 RTE Meetup 交叉核验。",
+      "dossierUrl": "",
+      "researchProfileUrl": "",
+      "deepProfileUrl": ""
+    }
+  ]
+}

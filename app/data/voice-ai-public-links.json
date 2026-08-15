@@ -1,0 +1,128 @@
+{
+  "version": "1.0",
+  "updated": "2026-08-15",
+  "note": "只收录已由人物本人、机构官网、项目主页或已有交叉核验确认的公开职业入口；个人账号与公司／项目账号分开标记。",
+  "profiles": {
+    "justin-uberti": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/juberti", "kind": "个人" },
+      { "label": "X", "url": "https://x.com/juberti", "kind": "个人" },
+      { "label": "GitHub", "url": "https://github.com/juberti", "kind": "个人" },
+      { "label": "个人网站", "url": "http://www.juberti.com", "kind": "个人" }
+    ],
+    "sean-dubois": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/sean-dubois", "kind": "个人" },
+      { "label": "GitHub", "url": "https://github.com/Sean-Der", "kind": "个人" },
+      { "label": "个人网站", "url": "http://siobud.com", "kind": "个人" },
+      { "label": "Pion", "url": "https://pion.ly/", "kind": "项目" }
+    ],
+    "许高-nathan-xu": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/nathan-xu-80b48755", "kind": "个人" },
+      { "label": "PLAUD", "url": "https://www.plaud.ai/", "kind": "公司" }
+    ],
+    "顾嘉唯": [
+      { "label": "LinkedIn", "url": "https://cn.linkedin.com/in/gujiawei", "kind": "个人" },
+      { "label": "Lingverse", "url": "https://www.lingverse.co/", "kind": "公司" }
+    ],
+    "greg-wayne": [
+      { "label": "Project Astra", "url": "https://deepmind.google/models/project-astra/", "kind": "项目" },
+      { "label": "Google 官方访谈", "url": "https://blog.google/feed/project-astra-podcast/", "kind": "项目" }
+    ],
+    "christopher-pedregal": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/pedregal", "kind": "个人" },
+      { "label": "X", "url": "https://x.com/cjpedregal", "kind": "个人" },
+      { "label": "Granola", "url": "https://www.granola.ai/", "kind": "公司" }
+    ],
+    "sam-stephenson": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/stephensonsam/", "kind": "个人" },
+      { "label": "X", "url": "https://x.com/samstphenson", "kind": "个人" },
+      { "label": "GitHub", "url": "https://github.com/samstephenson", "kind": "个人" },
+      { "label": "个人网站", "url": "https://www.samstephenson.com/", "kind": "个人" }
+    ],
+    "quinten-farmer": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/quintendf", "kind": "个人" },
+      { "label": "X", "url": "https://x.com/quintendf", "kind": "个人" },
+      { "label": "Tolan", "url": "https://www.tolans.com/", "kind": "公司" }
+    ],
+    "evan-goldschmidt": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/evangoldschmidt", "kind": "个人" },
+      { "label": "Tolan", "url": "https://www.tolans.com/", "kind": "公司" }
+    ],
+    "ajay-mehta": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/ajayumehta", "kind": "个人" },
+      { "label": "Tolan", "url": "https://www.tolans.com/", "kind": "公司" }
+    ],
+    "bibo-xu": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/bibo-xu-23b3585/", "kind": "个人" },
+      { "label": "Project Astra", "url": "https://deepmind.google/models/project-astra/", "kind": "项目" }
+    ],
+    "tanay-kothari": [
+      { "label": "Wispr Flow", "url": "https://wisprflow.ai/", "kind": "公司" },
+      { "label": "公司 X", "url": "https://x.com/wisprflow", "kind": "公司" }
+    ],
+    "mati-staniszewski": [
+      { "label": "LinkedIn", "url": "https://uk.linkedin.com/in/matiii", "kind": "个人" },
+      { "label": "X", "url": "https://x.com/mati", "kind": "个人" },
+      { "label": "ElevenLabs", "url": "https://elevenlabs.io/", "kind": "公司" }
+    ],
+    "piotr-da-bkowski": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/piotr-dabkowski-50222bba", "kind": "个人" },
+      { "label": "X", "url": "https://x.com/dabkowski_piotr", "kind": "个人" },
+      { "label": "官方作者页", "url": "https://elevenlabs.io/blog/authors/piotr-dabkowski", "kind": "公司" }
+    ],
+    "karan-goel": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/krandiash", "kind": "个人" },
+      { "label": "Cartesia", "url": "https://www.cartesia.ai/", "kind": "公司" },
+      { "label": "公司 X", "url": "https://x.com/cartesia", "kind": "公司" }
+    ],
+    "bing-wu": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/bingw/", "kind": "个人" },
+      { "label": "Retell AI", "url": "https://www.retellai.com/", "kind": "公司" },
+      { "label": "公司 X", "url": "https://x.com/retellai", "kind": "公司" }
+    ],
+    "zexia-zhang": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/zexia-zhang/", "kind": "个人" },
+      { "label": "Retell AI", "url": "https://www.retellai.com/", "kind": "公司" }
+    ],
+    "connor-zwick": [
+      { "label": "Speak", "url": "https://www.speak.com/", "kind": "公司" },
+      { "label": "Voice Agent 架构", "url": "https://www.speak.com/blog/building-speaks-voice-agent-platform", "kind": "项目" }
+    ],
+    "zach-koch": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/zachkoch", "kind": "个人" },
+      { "label": "GitHub", "url": "https://github.com/zkoch", "kind": "个人" },
+      { "label": "Ultravox", "url": "https://www.ultravox.ai/", "kind": "公司" },
+      { "label": "公司 X", "url": "https://x.com/ultravox_dot_ai", "kind": "公司" }
+    ],
+    "魏佳星": [
+      { "label": "LinkedIn", "url": "https://cn.linkedin.com/in/%E4%BD%B3%E6%98%9F-%E9%AD%8F-316671131", "kind": "个人" },
+      { "label": "VoiceAgent", "url": "https://www.voiceagent.cc/aboutus/", "kind": "公司" }
+    ],
+    "张栋": [
+      { "label": "个人主页", "url": "https://0nutation.github.io/", "kind": "个人" },
+      { "label": "LinkedIn", "url": "https://cn.linkedin.com/in/dong-zhang-33481520b", "kind": "个人" },
+      { "label": "Hugging Face", "url": "https://huggingface.co/nutation", "kind": "个人" },
+      { "label": "MiMo-Audio", "url": "https://github.com/XiaomiMiMo/MiMo-Audio", "kind": "项目" }
+    ],
+    "沈金堤": [
+      { "label": "RustPBX", "url": "https://www.rustpbx.com/", "kind": "项目" },
+      { "label": "GitHub", "url": "https://github.com/restsend/rustpbx", "kind": "项目" }
+    ],
+    "胡岳威-halajohn": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/weihutw/", "kind": "个人" },
+      { "label": "X", "url": "https://x.com/wei_hu_tw", "kind": "个人" },
+      { "label": "GitHub", "url": "https://github.com/halajohn", "kind": "个人" },
+      { "label": "TEN Framework", "url": "https://github.com/TEN-framework/ten-framework", "kind": "项目" }
+    ],
+    "张晴晴": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/qingqing-zhang-b06a7310a", "kind": "个人" },
+      { "label": "MagicHub", "url": "https://magichub.com/cn/datasets/", "kind": "公司" },
+      { "label": "GitHub", "url": "https://github.com/MagicHub-io", "kind": "公司" }
+    ],
+    "杜金房-seven-du": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/dujinfang", "kind": "个人" },
+      { "label": "个人资料站", "url": "https://book.dujinfang.com/", "kind": "个人" },
+      { "label": "FreeSWITCH 中文社区", "url": "https://www.freeswitch.org.cn/", "kind": "项目" },
+      { "label": "RTSCon", "url": "https://rts.cn/2025/", "kind": "项目" }
+    ]
+  }
+}
