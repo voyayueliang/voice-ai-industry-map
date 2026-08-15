@@ -97,6 +97,12 @@ function slugify(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]+/g, "-").replace(/^-|-$/g, "").slice(0, 80);
 }
 
+function cleanExternalText(value: string | null | undefined, maxLength = 260) {
+  const cleaned = (value ?? "").replace(/https?:\/\/\S+/g, "").replace(/\s+/g, " ").trim();
+  if (!cleaned) return "项目没有填写可用的公开简介，需要进入原始页面继续核验。";
+  return cleaned.length > maxLength ? cleaned.slice(0, maxLength).trimEnd() + "…" : cleaned;
+}
+
 function yearFromMonths(months: string) {
   const current = new Date();
   current.setMonth(current.getMonth() - Number(months));
@@ -113,16 +119,36 @@ function inferRepositoryLayer(repository: GitHubRepository, preset: FieldPreset)
 }
 
 async function discoverGitHub(keywords: string, preset: FieldPreset) {
-  const query = keywords + " in:name,description,topics fork:false";
-  const response = await fetch("https://api.github.com/search/repositories?q=" + encodeURIComponent(query) + "&sort=stars&order=desc&per_page=7", {
-    headers: {
-      Accept: "application/vnd.github+json",
-      "X-GitHub-Api-Version": "2022-11-28",
-    },
-  });
-  if (!response.ok) throw new Error("GitHub 公开检索暂时不可用（" + response.status + "）");
-  const payload = await response.json() as { items?: GitHubRepository[] };
-  const repositories = (payload.items ?? []).filter((repository) => !repository.archived).slice(0, 6);
+  const focusedQueries = preset.id === "generic"
+    ? [keywords.trim() || preset.label]
+    : preset.searchQueries;
+  const searchResults = await Promise.allSettled(focusedQueries.slice(0, 3).map(async (phrase) => {
+    const query = "\"" + phrase + "\" in:name,description,topics fork:false";
+    const response = await fetch("https://api.github.com/search/repositories?q=" + encodeURIComponent(query) + "&order=desc&per_page=5", {
+      headers: {
+        Accept: "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    });
+    if (!response.ok) throw new Error("GitHub 公开检索暂时不可用（" + response.status + "）");
+    const payload = await response.json() as { items?: GitHubRepository[] };
+    return payload.items ?? [];
+  }));
+  const repositoryPool = searchResults.flatMap((settled) => settled.status === "fulfilled" ? settled.value : []);
+  if (!repositoryPool.length) {
+    const firstFailure = searchResults.find((settled) => settled.status === "rejected");
+    if (firstFailure?.status === "rejected") throw firstFailure.reason;
+  }
+  const repositories = Array.from(new Map(repositoryPool.map((repository) => [repository.id, repository])).values())
+    .filter((repository) => !repository.archived)
+    .sort((left, right) => {
+      const leftText = [left.name, left.description ?? "", ...(left.topics ?? [])].join(" ").toLowerCase();
+      const rightText = [right.name, right.description ?? "", ...(right.topics ?? [])].join(" ").toLowerCase();
+      const leftMatches = focusedQueries.filter((phrase) => leftText.includes(phrase.toLowerCase())).length;
+      const rightMatches = focusedQueries.filter((phrase) => rightText.includes(phrase.toLowerCase())).length;
+      return rightMatches - leftMatches || right.stargazers_count - left.stargazers_count;
+    })
+    .slice(0, 6);
 
   const contributorResults = await Promise.allSettled(repositories.slice(0, 4).map(async (repository) => {
     const contributorResponse = await fetch("https://api.github.com/repos/" + repository.full_name + "/contributors?per_page=6&anon=false", {
@@ -190,7 +216,7 @@ async function discoverGitHub(keywords: string, preset: FieldPreset) {
     kind: "开源项目",
     url: repository.html_url,
     meta: repository.stargazers_count.toLocaleString() + " stars · 更新 " + repository.updated_at.slice(0, 10),
-    note: repository.description ?? "项目没有填写公开简介，需要进入仓库继续核验。",
+    note: cleanExternalText(repository.description),
   }));
 
   return { candidates: Array.from(candidates.values()), contextNodes, relations, sources };
@@ -198,7 +224,8 @@ async function discoverGitHub(keywords: string, preset: FieldPreset) {
 
 async function discoverResearchWorks(keywords: string, preset: FieldPreset, months: string) {
   const fromYear = yearFromMonths(months);
-  const endpoint = "https://api.crossref.org/works?query.title=" + encodeURIComponent(keywords) + "&filter=from-pub-date:" + fromYear + "-01-01&rows=8&select=DOI,title,author,published,URL,is-referenced-by-count,publisher";
+  const academicQuery = preset.id === "generic" ? keywords : preset.searchQueries[0];
+  const endpoint = "https://api.crossref.org/works?query.title=" + encodeURIComponent(academicQuery) + "&filter=from-pub-date:" + fromYear + "-01-01&rows=8&select=DOI,title,author,published,URL,is-referenced-by-count,publisher";
   const response = await fetch(endpoint, { headers: { Accept: "application/json" } });
   if (!response.ok) throw new Error("Crossref 论文检索暂时不可用（" + response.status + "）");
   const payload = await response.json() as { message?: { items?: CrossrefWork[] } };

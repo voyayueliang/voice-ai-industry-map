@@ -208,6 +208,9 @@
 .research-source-board a > strong { display: block; margin-top: 31px; font-size: 13px; line-height: 1.4; }
 .research-source-board a > small { display: block; margin-top: 9px; color: #75839a; font-size: 8px; }
 .research-source-board a > p { margin: 18px 0 0; color: #9ba8ba; font-size: 9px; line-height: 1.65; }
+.research-source-board a > strong,
+.research-source-board a > p { overflow-wrap: anywhere; }
+.research-source-board a > p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6; overflow: hidden; }
 .research-source-board a > b { position: absolute; right: 15px; top: 15px; color: var(--research-accent); }
 .research-source-board a:hover { background: rgba(255,255,255,.035); }
 

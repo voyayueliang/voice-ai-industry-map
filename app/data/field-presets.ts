@@ -9,6 +9,7 @@ export type FieldPreset = {
   label: string;
   match: string[];
   searchTerms: string;
+  searchQueries: string[];
   motherQuestion: string;
   boundary: string;
   layers: FieldLayer[];
@@ -32,6 +33,7 @@ export const fieldPresets: FieldPreset[] = [
     label: "Voice AI",
     match: ["voice ai", "voice agent", "语音 ai", "语音智能体", "对话式 ai"],
     searchTerms: "voice agent realtime speech conversational AI",
+    searchQueries: ["voice agent", "realtime speech AI", "conversational voice AI"],
     motherQuestion: "机器怎样听见、理解并以接近实时的方式回应人？",
     boundary: "包含实时语音模型、媒体传输、Agent 运行、语音产品与开发者生态；不把普通录音转写或泛聊天机器人自动纳入。",
     layers: [
@@ -48,6 +50,7 @@ export const fieldPresets: FieldPreset[] = [
     label: "AI Coding",
     match: ["ai coding", "coding agent", "developer agent", "代码智能体", "编程智能体", "ai 编程"],
     searchTerms: "AI coding agent code generation software engineering",
+    searchQueries: ["AI coding agent", "code generation agent", "software engineering agent"],
     motherQuestion: "AI 怎样从补全代码，走向理解、修改和交付一个真实软件系统？",
     boundary: "包含代码模型、代码理解、Agent 运行、开发工具和企业部署；不把所有通用大模型或普通低代码工具自动纳入。",
     layers: [
@@ -64,6 +67,7 @@ export const fieldPresets: FieldPreset[] = [
     label: "具身智能",
     match: ["embodied ai", "robotics foundation model", "具身智能", "机器人基础模型"],
     searchTerms: "embodied AI robotics foundation model vision language action",
+    searchQueries: ["embodied AI", "robotics foundation model", "vision language action"],
     motherQuestion: "智能系统怎样在物理世界中感知、行动并从反馈中学习？",
     boundary: "包含感知、世界模型、规划学习、仿真数据、控制硬件与机器人部署；不把只有机械结构、没有学习或智能系统的项目自动纳入。",
     layers: [
@@ -80,6 +84,7 @@ export const fieldPresets: FieldPreset[] = [
     label: "AI for Science",
     match: ["ai for science", "scientific ai", "科学智能", "ai4s"],
     searchTerms: "AI for science scientific discovery machine learning",
+    searchQueries: ["AI for science", "scientific discovery AI", "scientific machine learning"],
     motherQuestion: "AI 怎样真正改变科学问题的提出、实验和验证？",
     boundary: "包含科学模型、专业数据、计算与实验平台、真实科研验证和转化；不把只借用科学词汇的通用模型自动纳入。",
     layers: [
@@ -104,6 +109,7 @@ export function resolveFieldPreset(input: string): FieldPreset {
     label,
     match: [],
     searchTerms: label,
+    searchQueries: [label],
     motherQuestion: label + " 正在改变哪一种真实能力、工作流或社会关系？",
     boundary: "这是自动生成的通用边界草案。开始人物研究前，需要确认哪些技术、产品和相邻领域应该被纳入。",
     layers: [
