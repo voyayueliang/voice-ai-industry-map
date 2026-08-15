@@ -45,6 +45,7 @@ try {
   await rm(outputDirectory, { recursive: true, force: true });
   await mkdir(outputDirectory, { recursive: true });
   await cp(clientDirectory, outputDirectory, { recursive: true });
+  await cp(path.join(projectRoot, "app", "icon.svg"), path.join(outputDirectory, "icon.svg"));
 
   for (const page of pages) {
     const response = await fetch(`${origin}${basePath}${page.route}`);
