@@ -305,10 +305,11 @@
 .standalone-network-title p { margin: 8px 0 0; color: #8c98aa; font-size: 9px; }
 .standalone-network-back { display: flex; align-items: center; justify-content: center; border-left: 1px solid rgba(210,222,240,.15); color: #aeb9ca; text-decoration: none; font-size: 9px; }
 .standalone-network-back:hover { background: #e9cc5f; color: #080a0f; }
-.standalone-network-actions { display: grid; grid-template-columns: 1fr 1fr; border-left: 1px solid rgba(210,222,240,.15); }
+.standalone-network-actions { display: grid; grid-template-columns: repeat(3, 1fr); border-left: 1px solid rgba(210,222,240,.15); }
 .standalone-network-actions a { display: flex; align-items: center; justify-content: center; padding: 0 10px; color: #aeb9ca; text-decoration: none; text-align: center; font-size: 8px; line-height: 1.35; }
 .standalone-network-actions a + a { border-left: 1px solid rgba(210,222,240,.15); }
 .standalone-network-actions a:first-child { color: #080a0f; background: #e9cc5f; font-weight: 700; }
+.standalone-network-actions a:nth-child(2) { color: #e7b29f; }
 .standalone-network-actions a:hover { background: #eef3fb; color: #080a0f; }
 
 .standalone-network-grid { height: calc(100dvh - 66px); display: grid; grid-template-columns: 230px minmax(0, 1fr) 450px; min-height: 0; }

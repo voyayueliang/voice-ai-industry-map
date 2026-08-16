@@ -439,7 +439,7 @@ export default function ResearchPage() {
       <header className="research-header">
         <a href={siteBasePath + "/"} className="research-brand"><span>FRONTIER FIELD ATLAS</span><strong>前沿 AI 行业人物研究引擎</strong></a>
         <div className="research-header-note"><span>FOR PROFESSIONAL NEWCOMERS</span><p>给带着学习、研究或访谈任务进入陌生领域的人</p></div>
-        <a href={siteBasePath + "/network"} className="research-sample-link">查看已核验样本：Voice AI ↗</a>
+        <div className="research-header-links"><a href={siteBasePath + "/history"}>历史学习 Demo</a><a href={siteBasePath + "/network"}>Voice AI 样本 ↗</a></div>
       </header>
 
       <section className="research-intake">

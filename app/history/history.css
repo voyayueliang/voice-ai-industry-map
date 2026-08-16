@@ -1,0 +1,308 @@
+.history-app {
+  --history-bg: #f2ead9;
+  --history-paper: #fbf7ef;
+  --history-ink: #18211d;
+  --history-muted: #6b716b;
+  --history-line: rgba(24, 33, 29, .24);
+  --history-red: #b33d2e;
+  --history-blue: #284d66;
+  min-height: 100vh;
+  background: var(--history-bg);
+  color: var(--history-ink);
+}
+
+.history-app button,
+.history-app input { font: inherit; }
+
+.history-header {
+  min-height: 74px;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  display: grid;
+  grid-template-columns: 350px minmax(0, 1fr) 250px;
+  border-bottom: 1px solid var(--history-ink);
+  background: rgba(242, 234, 217, .94);
+  backdrop-filter: blur(18px);
+}
+.history-header a { color: inherit; text-decoration: none; }
+.history-brand { padding: 15px 24px; border-right: 1px solid var(--history-line); }
+.history-brand span,
+.history-header-question span,
+.history-kicker,
+.history-timeline-section > header span,
+.history-network-section > header span,
+.history-interpretation-section > header span,
+.history-source-section > header span {
+  font: 700 9px/1 var(--font-geist-mono), monospace;
+  letter-spacing: .13em;
+  color: var(--history-red);
+}
+.history-brand strong { display: block; margin-top: 9px; font-size: 13px; }
+.history-header-question { padding: 15px 22px; }
+.history-header-question p { margin: 8px 0 0; font: 600 12px/1.2 "Iowan Old Style", "Songti SC", serif; }
+.history-exit { border-left: 1px solid var(--history-line); display: grid; place-items: center; padding: 0 18px; font-size: 11px; }
+.history-exit:hover { background: var(--history-ink); color: var(--history-paper); }
+
+.history-hero {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(360px, .7fr);
+  gap: 8vw;
+  align-items: end;
+  padding: 90px 6vw 72px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--history-ink);
+  background:
+    linear-gradient(90deg, transparent 49.9%, rgba(24,33,29,.08) 50%, transparent 50.1%),
+    radial-gradient(circle at 75% 30%, rgba(179,61,46,.09), transparent 28%);
+}
+.history-hero::before {
+  content: "1962 / 1969 / 1974 / 1983 / 1989";
+  position: absolute;
+  right: -20px;
+  top: 105px;
+  color: rgba(24,33,29,.055);
+  font: 700 clamp(48px, 7vw, 108px)/1 var(--font-geist-mono), monospace;
+  letter-spacing: -.09em;
+  transform: rotate(90deg) translateX(50%);
+  transform-origin: right top;
+  white-space: nowrap;
+}
+.history-hero > div { position: relative; z-index: 2; }
+.history-kicker { margin: 0; }
+.history-hero h1 {
+  margin: 32px 0 0;
+  font: 500 clamp(70px, 10vw, 150px)/.86 "Iowan Old Style", "Songti SC", "Noto Serif SC", Georgia, serif;
+  letter-spacing: -.075em;
+}
+.history-hero-copy { padding-top: 22px; border-top: 4px solid var(--history-ink); }
+.history-hero-copy > strong { font: 600 25px/1.35 "Iowan Old Style", "Songti SC", serif; }
+.history-hero-copy > p { margin: 24px 0 0; color: #4f5953; font-size: 15px; line-height: 1.9; }
+.history-hero-copy > div { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 7px; }
+.history-hero-copy span { border: 1px solid var(--history-line); padding: 7px 9px; font-size: 9px; }
+
+.history-how-to-read {
+  min-height: 155px;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  border-bottom: 1px solid var(--history-ink);
+  background: var(--history-ink);
+  color: var(--history-paper);
+}
+.history-how-to-read > span { padding: 28px 3vw; color: #df9a83; font: 700 9px/1 var(--font-geist-mono), monospace; letter-spacing: .12em; border-right: 1px solid rgba(255,255,255,.2); }
+.history-how-to-read ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); }
+.history-how-to-read li { padding: 26px 2.2vw; border-right: 1px solid rgba(255,255,255,.2); }
+.history-how-to-read li:last-child { border-right: 0; }
+.history-how-to-read b { color: #df9a83; font: 500 10px/1 var(--font-geist-mono), monospace; }
+.history-how-to-read strong { display: block; margin-top: 20px; font: 600 16px/1.2 "Iowan Old Style", "Songti SC", serif; }
+.history-how-to-read small { display: block; margin-top: 8px; color: #9fa9a3; font-size: 9px; }
+
+.history-timeline-section,
+.history-network-section,
+.history-interpretation-section,
+.history-source-section { padding: 88px 3vw; border-bottom: 1px solid var(--history-ink); }
+.history-timeline-section > header,
+.history-network-section > header,
+.history-interpretation-section > header,
+.history-source-section > header {
+  margin: 0 3vw 42px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(330px, .55fr);
+  align-items: end;
+  gap: 70px;
+}
+.history-timeline-section h2,
+.history-network-section h2,
+.history-interpretation-section h2,
+.history-source-section h2 { margin: 18px 0 0; font: 500 clamp(38px, 4.8vw, 74px)/1 "Iowan Old Style", "Songti SC", Georgia, serif; letter-spacing: -.05em; }
+.history-timeline-section > header p,
+.history-network-section > header p,
+.history-interpretation-section > header p,
+.history-source-section > header p { margin: 0; color: var(--history-muted); font-size: 12px; line-height: 1.8; }
+
+.history-timeline-section { background: var(--history-paper); }
+.history-timeline-track {
+  margin: 0 3vw;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(160px, 1fr));
+  overflow-x: auto;
+  border: 1px solid var(--history-ink);
+}
+.history-timeline-track button {
+  min-height: 300px;
+  position: relative;
+  padding: 18px 15px 22px;
+  border: 0;
+  border-right: 1px solid var(--history-line);
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.history-timeline-track button:last-child { border-right: 0; }
+.history-timeline-track button:hover,
+.history-timeline-track button.is-active { background: var(--history-blue); color: var(--history-paper); }
+.history-timeline-track time { font: 700 11px/1 var(--font-geist-mono), monospace; color: var(--history-red); }
+.history-timeline-track i { display: block; width: 10px; height: 10px; margin: 45px 0 25px; border: 1px solid currentColor; border-radius: 50%; }
+.history-timeline-track button.is-active i { background: #ffe46a; border-color: #ffe46a; box-shadow: 0 0 18px #ffe46a; }
+.history-timeline-track strong { display: block; min-height: 42px; font: 600 15px/1.35 "Iowan Old Style", "Songti SC", serif; }
+.history-timeline-track p { margin: 17px 0 0; color: var(--history-muted); font-size: 9px; line-height: 1.7; }
+.history-timeline-track button:hover p,
+.history-timeline-track button.is-active p { color: #b9c8d0; }
+.history-event-focus {
+  margin: 22px 3vw 0;
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr) 250px;
+  gap: 30px;
+  align-items: center;
+  padding: 22px;
+  border: 1px solid var(--history-line);
+  background: #eee1c9;
+}
+.history-event-focus span { color: var(--history-red); font: 700 8px/1 var(--font-geist-mono), monospace; }
+.history-event-focus strong { display: block; margin-top: 10px; font-size: 13px; }
+.history-event-focus p { margin: 0; color: #505852; font-size: 11px; line-height: 1.7; }
+.history-event-focus a { color: var(--history-blue); text-decoration: none; font-size: 9px; text-align: right; }
+
+.history-network-section { padding-left: 0; padding-right: 0; background: #0b1015; color: #edf3f6; }
+.history-network-section > header p { color: #8e9aa2; }
+.history-network-grid { min-height: 830px; display: grid; grid-template-columns: 250px minmax(480px, 1fr) 350px; margin: 0 2vw; border: 1px solid rgba(203,220,229,.28); }
+.history-people-list { min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); border-right: 1px solid rgba(203,220,229,.2); }
+.history-people-list > header { padding: 17px; border-bottom: 1px solid rgba(203,220,229,.2); }
+.history-people-list > header span { font-size: 11px; font-weight: 700; }
+.history-people-list > header p { margin: 9px 0 0; color: #829099; font-size: 8px; line-height: 1.5; }
+.history-people-list > div { overflow-y: auto; max-height: 730px; }
+.history-people-list button { width: 100%; min-height: 69px; display: grid; grid-template-columns: 7px minmax(0, 1fr) 18px; gap: 10px; align-items: center; padding: 10px 12px; border: 0; border-bottom: 1px solid rgba(203,220,229,.15); background: transparent; color: inherit; text-align: left; cursor: pointer; }
+.history-people-list button:hover { background: rgba(255,255,255,.05); }
+.history-people-list button.is-active { background: #edf3f6; color: #11171b; }
+.history-people-list button > i { width: 7px; height: 7px; border-radius: 50%; box-shadow: 0 0 8px currentColor; }
+.history-people-list button strong { display: block; font-size: 10px; }
+.history-people-list button small { display: -webkit-box; margin-top: 6px; color: #7f8c94; font-size: 7px; line-height: 1.4; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.history-people-list button > b { color: #718088; font: 500 8px/1 var(--font-geist-mono), monospace; }
+
+.history-graph-panel { min-width: 0; display: grid; grid-template-rows: 72px minmax(0, 1fr); border-right: 1px solid rgba(203,220,229,.2); }
+.history-graph-panel > header { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 0 17px; border-bottom: 1px solid rgba(203,220,229,.2); }
+.history-graph-panel > header span { color: #df9a83; font: 700 8px/1 var(--font-geist-mono), monospace; }
+.history-graph-panel > header strong { display: block; margin-top: 8px; font-size: 11px; }
+.history-graph-panel > header > div:last-child { display: flex; }
+.history-graph-panel > header button { border: 1px solid rgba(203,220,229,.24); background: transparent; color: #94a1a9; padding: 8px 10px; font-size: 8px; cursor: pointer; }
+.history-graph-panel > header button.is-active { background: #edf3f6; color: #11171b; }
+.history-graph-stage { min-height: 755px; position: relative; overflow: hidden; background: #010207; }
+.history-graph-stage .force-graph-shell,
+.history-graph-stage .force-graph-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.history-graph-key { position: absolute; z-index: 6; left: 15px; bottom: 14px; display: flex; gap: 12px; padding: 9px 11px; border: 1px solid rgba(203,220,229,.2); background: rgba(2,4,10,.8); color: #8e9aa2; font-size: 8px; pointer-events: none; }
+.history-graph-key span { display: flex; align-items: center; gap: 5px; }
+.history-graph-key i { width: 7px; height: 7px; border-radius: 50%; }
+.history-person-dot { background: #7fc8ff; box-shadow: 0 0 8px #7fc8ff; }
+.history-institution-dot { background: #ffab68; box-shadow: 0 0 8px #ffab68; }
+
+.history-person-card { max-height: 830px; overflow-y: auto; padding: 23px 19px 28px; background: #11171d; }
+.history-person-card h2 { margin: 17px 0 7px; font: 500 34px/1 "Iowan Old Style", "Songti SC", serif; letter-spacing: -.04em; }
+.history-person-card > span { color: #8a969e; font-size: 8px; }
+.history-person-card section { margin-top: 22px; padding-top: 14px; border-top: 1px solid rgba(203,220,229,.18); }
+.history-person-card section > small { display: block; color: #df9a83; font: 700 8px/1 var(--font-geist-mono), monospace; }
+.history-person-card section > strong { display: block; margin-top: 12px; font-size: 12px; line-height: 1.45; }
+.history-person-card section > p { margin: 11px 0 0; color: #aab5bb; font-size: 9px; line-height: 1.75; }
+.history-position { border: 1px solid rgba(255,228,106,.26) !important; padding: 14px; background: rgba(255,228,106,.035); }
+.history-term strong { color: #ffe46a; }
+.history-caution { border-left: 2px solid #df9a83; padding-left: 12px; }
+.history-direct-relations > div { margin-top: 10px; display: grid; grid-template-columns: 7px minmax(0, 1fr); gap: 8px; align-items: center; }
+.history-direct-relations > div > i { width: 7px; height: 2px; }
+.history-direct-relations > div strong { display: block; font-size: 9px; }
+.history-direct-relations > div small { display: block; margin-top: 4px; color: #79868e; font-size: 7px; }
+.history-primary-source { display: block; margin-top: 24px; border: 1px solid rgba(203,220,229,.35); padding: 12px; color: #edf3f6; text-decoration: none; font-size: 8px; line-height: 1.5; }
+.history-primary-source:hover { background: #edf3f6; color: #11171b; }
+
+.history-interpretation-section { background: #d7c4a5; }
+.history-interpretation-section > div { margin: 0 3vw; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--history-ink); }
+.history-interpretation-section article { min-height: 390px; padding: 23px; border-right: 1px solid var(--history-ink); }
+.history-interpretation-section article:last-child { border-right: 0; }
+.history-interpretation-section article > span { display: inline-block; border: 1px solid var(--history-red); color: var(--history-red); padding: 6px 8px; font: 700 8px/1 var(--font-geist-mono), monospace; }
+.history-interpretation-section h3 { margin: 58px 0 0; font: 600 24px/1.25 "Iowan Old Style", "Songti SC", serif; }
+.history-interpretation-section article p { margin: 25px 0 0; color: #4e514c; font-size: 11px; line-height: 1.9; }
+.history-interpretation-section article a { display: block; margin-top: 25px; color: var(--history-blue); text-decoration: none; font-size: 8px; line-height: 1.6; }
+
+.history-source-section { background: var(--history-paper); }
+.history-source-grid { margin: 0 3vw; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--history-ink); }
+.history-source-grid a { min-height: 260px; position: relative; padding: 19px; border-right: 1px solid var(--history-line); border-bottom: 1px solid var(--history-line); color: inherit; text-decoration: none; }
+.history-source-grid a:nth-child(3n) { border-right: 0; }
+.history-source-grid a:nth-last-child(-n+3) { border-bottom: 0; }
+.history-source-grid a:hover { background: #eee1c9; }
+.history-source-grid span { color: var(--history-red); font: 700 8px/1 var(--font-geist-mono), monospace; }
+.history-source-grid strong { display: block; margin-top: 46px; font: 600 18px/1.35 "Iowan Old Style", "Songti SC", serif; }
+.history-source-grid p { margin: 20px 0 0; color: var(--history-muted); font-size: 9px; line-height: 1.75; }
+.history-source-grid b { position: absolute; right: 16px; top: 16px; color: var(--history-red); }
+
+.history-next { min-height: 230px; display: grid; grid-template-columns: 220px minmax(0, 1fr) 230px; gap: 50px; align-items: center; padding: 50px 6vw; background: var(--history-ink); color: var(--history-paper); }
+.history-next span { color: #df9a83; font: 700 9px/1 var(--font-geist-mono), monospace; letter-spacing: .12em; }
+.history-next strong { font: 500 clamp(20px, 2.3vw, 34px)/1.45 "Iowan Old Style", "Songti SC", serif; }
+.history-next a { color: var(--history-paper); text-decoration: none; font-size: 10px; text-align: right; }
+
+@media (max-width: 1100px) {
+  .history-header { grid-template-columns: 310px minmax(0, 1fr) 200px; }
+  .history-network-grid { grid-template-columns: 220px minmax(420px, 1fr) 320px; }
+  .history-source-grid { grid-template-columns: repeat(2, 1fr); }
+  .history-source-grid a:nth-child(3n) { border-right: 1px solid var(--history-line); }
+  .history-source-grid a:nth-child(2n) { border-right: 0; }
+  .history-source-grid a:nth-last-child(-n+3) { border-bottom: 1px solid var(--history-line); }
+  .history-source-grid a:nth-last-child(-n+2) { border-bottom: 0; }
+}
+
+@media (max-width: 880px) {
+  .history-header { grid-template-columns: 1fr auto; }
+  .history-header-question { display: none; }
+  .history-exit { width: 78px; font-size: 0; }
+  .history-exit::after { content: "AI 样本 ↗"; font-size: 8px; }
+  .history-hero { min-height: 0; grid-template-columns: 1fr; gap: 65px; padding-top: 70px; }
+  .history-how-to-read { grid-template-columns: 1fr; }
+  .history-how-to-read > span { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.2); }
+  .history-timeline-section > header,
+  .history-network-section > header,
+  .history-interpretation-section > header,
+  .history-source-section > header { grid-template-columns: 1fr; gap: 25px; }
+  .history-event-focus { grid-template-columns: 1fr; }
+  .history-event-focus a { text-align: left; }
+  .history-network-grid { display: block; }
+  .history-people-list { max-height: 330px; border-right: 0; border-bottom: 1px solid rgba(203,220,229,.2); }
+  .history-people-list > div { max-height: 240px; }
+  .history-graph-panel { min-height: 680px; border-right: 0; border-bottom: 1px solid rgba(203,220,229,.2); }
+  .history-graph-stage { min-height: 608px; }
+  .history-person-card { max-height: none; }
+  .history-interpretation-section > div { grid-template-columns: 1fr; }
+  .history-interpretation-section article { min-height: 0; border-right: 0; border-bottom: 1px solid var(--history-ink); }
+  .history-interpretation-section article:last-child { border-bottom: 0; }
+  .history-interpretation-section h3 { margin-top: 35px; }
+  .history-next { grid-template-columns: 1fr; }
+  .history-next a { text-align: left; }
+}
+
+@media (max-width: 560px) {
+  .history-brand { padding-left: 14px; }
+  .history-brand span { font-size: 7px; }
+  .history-brand strong { font-size: 10px; }
+  .history-hero { padding-left: 18px; padding-right: 18px; }
+  .history-hero h1 { font-size: 72px; }
+  .history-how-to-read ol { grid-template-columns: 1fr; }
+  .history-how-to-read li { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.2); }
+  .history-how-to-read li:last-child { border-bottom: 0; }
+  .history-timeline-section,
+  .history-interpretation-section,
+  .history-source-section { padding-left: 0; padding-right: 0; }
+  .history-timeline-section > header,
+  .history-interpretation-section > header,
+  .history-source-section > header { margin-left: 18px; margin-right: 18px; }
+  .history-timeline-track,
+  .history-event-focus,
+  .history-interpretation-section > div,
+  .history-source-grid { margin-left: 18px; margin-right: 18px; }
+  .history-source-grid { grid-template-columns: 1fr; }
+  .history-source-grid a,
+  .history-source-grid a:nth-child(2n),
+  .history-source-grid a:nth-child(3n),
+  .history-source-grid a:nth-last-child(-n+2) { min-height: 225px; border-right: 0; border-bottom: 1px solid var(--history-line); }
+  .history-source-grid a:last-child { border-bottom: 0; }
+  .history-network-grid { margin: 0; }
+  .history-graph-key { right: 10px; left: 10px; flex-wrap: wrap; }
+}

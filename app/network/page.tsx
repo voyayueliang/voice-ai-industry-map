@@ -178,7 +178,7 @@ export default function NetworkPage() {
       <header className="standalone-network-header">
         <a className="standalone-network-brand" href={`${siteBasePath}/`}><span>FRONTIER FIELD ATLAS</span><strong>Voice AI · 已核验行业样本</strong></a>
         <div className="standalone-network-title"><span>FOR PROFESSIONAL NEWCOMERS / 给带着任务进入陌生领域的人</span><p>先认识行业怎样运转，再研究人物、技术路线、关系与证据。</p></div>
-        <div className="standalone-network-actions"><a href={`${siteBasePath}/research`}>研究一个新领域</a><a href={`${siteBasePath}/guide`}>Voice AI 学习导读 ↗</a></div>
+        <div className="standalone-network-actions"><a href={`${siteBasePath}/research`}>研究一个新领域</a><a href={`${siteBasePath}/history`}>历史学习 Demo</a><a href={`${siteBasePath}/guide`}>Voice AI 导读 ↗</a></div>
       </header>
 
       <div className="standalone-network-grid">
